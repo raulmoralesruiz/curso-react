@@ -1,18 +1,23 @@
-const getMessage = (name) => `Hello ${name}!`;
+import PropTypes from "prop-types";
 
-const variable = {
-  name: "John",
-  age: 30,
-  country: "USA",
-};
+export const FirstApp = ({ title, subtitle }) => {
+  // console.log(props);
 
-export const FirstApp = () => {
   return (
     <>
-      <h1>FirstApp</h1>
-      <p>{getMessage(variable.name)}</p>
+      <h1>{title}</h1>
       {/* <code>{ JSON.stringify(variable) }</code> */}
-      <p>algo</p>
+      <p>{subtitle}</p>
     </>
   );
+};
+
+FirstApp.propTypes = {
+  title: PropTypes.string.isRequired,
+  subtitle: PropTypes.string.isRequired,
+};
+
+FirstApp.defaultProps = {
+  title: "Default title",
+  subtitle: "Default subtitle",
 };
