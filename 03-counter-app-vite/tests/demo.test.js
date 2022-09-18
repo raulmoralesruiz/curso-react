@@ -1,5 +1,15 @@
-test("Esta prueba no debe fallar", () => {
-  if (1 === 0) {
-    throw new Error("No se puede dividir por cero");
-  }
+describe("Pruebas en <DemoComponent />", () => {
+
+  test("Esta prueba no debe fallar", () => {
+    // Arrange
+    const message1 = "Hola Mundo";
+  
+    // Act
+    const message2 = message1.trim();
+  
+    // Assert
+    expect(message1).toBe(message2);
+  });
+  
 });
+
