@@ -20,9 +20,9 @@ export const CounterApp = ({ value }) => {
       <h1>CounterApp</h1>
       <h2>{counter}</h2>
 
-      <button onClick={clickSum}> +1 </button>
-      <button onClick={clickSub}> -1 </button>
-      <button onClick={clickReset}> Reset </button>
+      <button onClick={clickSum}>+1</button>
+      <button onClick={clickSub}>-1</button>
+      <button aria-label="btn-reset" onClick={clickReset}> Reset </button>
     </>
   );
 };
