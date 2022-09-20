@@ -1,15 +1,12 @@
+import { getGifts } from "../helpers/getGifs";
+
 export const GifGrid = ({ category }) => {
 
-  const gifs = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+  getGifts(category);
 
   return (
     <>
       <h3>{ category }</h3>
-      {
-        gifs.map( gif => (
-          <li key={gif}>{ gif }</li>
-        ))
-      }
     </>
   )
 }
