@@ -15,9 +15,20 @@ export const SimpleForm = () => {
     });
   };
 
+  // Se ejecuta una sola vez
   useEffect(() => {
     console.log("hola!");
   }, []);
+
+  // Se ejecuta cada vez que cambia el formulario
+  useEffect(() => {
+    console.log("formState changed");
+  }, [formState]);
+  
+  // Se ejecuta cada vez que cambia el email (también cambia el formulario)
+  useEffect(() => {
+    console.log("email changed");
+  }, [email]);
 
   return (
     <>
